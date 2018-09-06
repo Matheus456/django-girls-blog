@@ -2,9 +2,17 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Post list</title>
   </head>
   <body>
-
+    <h1>Post List</h1>
+      {% for post in posts %}
+      <h3>
+        <u> {{ post.title }} </u>
+        <br>
+        {{ post.text }}
+      </h3>
+      <p>Publicado em: {{ post.published_date|linebreaksbr }}</p>
+      {% endfor %}
   </body>
 </html>
